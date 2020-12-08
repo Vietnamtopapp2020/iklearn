@@ -7695,6 +7695,7 @@
                     });
 
                     $('.find-card-more').live('click', function (e) {
+                        closeNav();
                         e.preventDefault();
 
                         var id = $(this).attr('data-id');
@@ -14895,6 +14896,8 @@
                             }
                         });
                     }
+
+
 
                     function getDistancePlace(text = '', type = ''){
                         var distance = '';
