@@ -3291,7 +3291,7 @@
             foreach($flashcards as $flashcard)
             {
                 if($flashcard->folder_id == $folder->id) {
-                    $a[] = 'w' . $flashcard->id . ': {word_id: "' . $flashcard->id . '", word: ' . json_encode($flashcard->word) . ', memorized: ' . $flashcard->memorized . ', notes: ' . json_encode($flashcard->notes) . ', dict_id: '. $flashcard->dictionary_id .'}';
+                    $a[] = 'w' . $flashcard->id . ': {word_id: "' . $flashcard->id . '", word: ' . json_encode($flashcard->word) . ', memorized: ' . $flashcard->memorized . ', notes: ' . json_encode($flashcard->notes) . ', dict_id: '. $flashcard->dictionary_id .', stt: '. $flashcard->stt .'}';
                     //array_push($array_memory, $flashcard->memorized);
                 }
             }
@@ -3670,6 +3670,45 @@
                     <div class="col-sm-6" style="padding-left: 2px !important;">
                         <div class="form-group" style="margin-bottom: 3px;">
                             <button style="background: #cecece;" type="button" id="close-add" class="border-btn btn-dark-blue"><?php _e('CANCEL', 'iii-dictionary') ?></button>
+                        </div>
+                    </div>
+                                      
+                </div>
+            </div>      
+        </div>
+    </div>
+</div>
+<div id="edit-word-box" class="" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="fl-header-box">
+                
+                <span><?php _e('EDIT WORD', 'iii-dictionary') ?></span>
+                <img id="cls-fdw" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Not_Available.png">
+            </div>
+            <div id="edit-word-dics" class="fl-cent-box" style="font-size: 16px; color: black;">
+                <div class="find-general-border mt-top-18">
+                    <div class="form-group">
+                        <span class="find-label">Edit<span class="required-star"> *</span></span>
+                         <input type="text" class="form-control" id="word-edit" style="height:42px" autocomplete="off" >
+                        <div class="clear-input" onclick="document.getElementById('word-edit').value=null;"></div>
+                        
+                    </div>
+                </div>
+                
+                <div style="border-top: 1px solid #d9d9d9; padding-top: 15px; margin-top: 25px; ">Do you want to add new words to the dictionary? <a class="sub-dictionary-now" style="color: #ff8283;"> Subscribe Dictionary Now.</a></div>
+                    
+            </div>
+            <div class="fl-bot-box">
+                <div class="row">
+                    <div class="col-sm-6" style="padding-right: 1px !important;">
+                        <div class="form-group" style="margin-bottom: 3px;">
+                            <button style="background: #58aec7;" type="button" class="border-btn btn-dark-blue" id="word-edit-btn" ><?php _e('SAVE', 'iii-dictionary') ?></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="padding-left: 2px !important;">
+                        <div class="form-group" style="margin-bottom: 3px;">
+                            <button style="background: #cecece;" type="button" id="close-edit" class="border-btn btn-dark-blue"><?php _e('CANCEL', 'iii-dictionary') ?></button>
                         </div>
                     </div>
                                       
@@ -4169,7 +4208,7 @@
                                             <li id="getting-tutoring"><a id="tutor-main-home" class="redirect-create" data-toggle="tab" href="#tutoring-main">Getting Tutoring<img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png"></a></li>
                                             <li id="native-speaker"><a id="" class="redirect-create" data-toggle="tab" href="#tutoring-main">English Conversation<br>with Native Speaker<img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png"></a></li>
                                             <li id="sub-findingtutor" ><a class="redirect-create" data-toggle="tab" href="#tutoring-main">Find a Tutor<img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png"></a></li>
-                                            <ul id="find-course" style="display: none; padding-left: 15px;">
+                                            <ul id="find-course" style="display: none; ">
                                                 <li class="onl-math" data-type="english-conv"><img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png" style="width: 8px !important">&nbsp;&nbsp;<a  data-toggle="tab"  >English Conversation</a> </li>
                                                 <li class="onl-math" data-type="english-wri"><img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png" style="width: 8px !important">&nbsp;&nbsp;<a  data-toggle="tab" >English Writing</a></li>
                                                 <li class="onl-math" data-type="math"><img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png" style="width: 8px !important">&nbsp;&nbsp;<a data-toggle="tab"  >Math</a></li>
@@ -5985,7 +6024,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            // $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "0px");
                             
                              
                         
@@ -6006,7 +6045,8 @@
                             $('#icon-tutoring div:nth-child(5)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(7)').css("margin-top", "23px");                            
-                        $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "0px");
+                        $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "2px");
+                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "0px");
                         $('#sub-findingtutor img').attr("src","<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_open_state.png");                        
                         $('#sub-findingtutor img').css('padding','0');                         
                         // 
@@ -6022,7 +6062,7 @@
                             $('#icon-tutoring div:nth-child(5)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(7)').css("margin-top", "23px");                            
-                        $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "0px");
+                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "0px");
                         }
                     });
                     $('#sat-mat').click(function(){
@@ -11677,7 +11717,7 @@
 
                         closeNav();
 
-                    });
+                    }); 
 
                     $(".close-quicknotifi").live("click",function(e){
                         e.stopPropagation();
@@ -11743,6 +11783,9 @@
                         
                        
                     });
+                    $('.section-right').click(function(){
+                    closeNav()
+                });
                     $(".student-center").click( function (e){
                         closeNav();
                          $("#open-menu-schedule").css("display","none");
@@ -13798,7 +13841,7 @@
                         }
                         $('#menu-left-myaccount li:nth-child(2)').css("margin-top", "0");
                         $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "3px");
-                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "8px");
+                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "2px");
                         $('#menu-left-myaccount li:nth-child(5)').css("margin-top", "5px");
                         $('#menu-left-myaccount li:nth-child(6)').css("margin-top", "6px");
 
@@ -13931,7 +13974,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "2px");
                     }
                     function change_image_list(x,y) {
                         x.attr('src','<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN_normal_state.png');
@@ -15369,6 +15412,7 @@
             }
             
             });
+
              $(document).ready(function() {
                 $.get(home_url + "/?r=ajax/checkname", {}, function (data) {
                         data = JSON.parse(data);       
