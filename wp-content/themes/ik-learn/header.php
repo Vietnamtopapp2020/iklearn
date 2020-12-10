@@ -2285,6 +2285,86 @@
                                                     </div>
 
                                                 </div>
+                                                <div class="english-conver" style="display: none; margin-left: -34px;">
+                                                    <div class="step-box">
+                                                        
+                                                        <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/05_Title_Image.jpg">
+                                                        <div style=" float: right; width: 400px;">
+                                                            <br>
+                                                            <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">Welcome to iktutor.com! Let’s get you started with the tutoring.</span>
+                                                            <br><br>
+                                                            <span style="font-family: Myriad_light; color: #8a8a8a;font-size: 17px; ">These 4 Steps of Quick Start Guide will help you through how to get into Online Tutoring with the basics that you need to know.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="step-box" >
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                        <div class="step-btn" style=" background: #58aec8;">STEP 1</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 305px" src="<?php echo get_template_directory_uri(); ?>/library/images/06_Step1.jpg">
+                                                        <div>
+                                                            <p class="tit-getting">Do you have enough points for <br>tutoring? If not, here’s what <br>you can do!</p>
+                                                            <ul class="list-getting">
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>You will spend points to schedule a Tutoring.</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>1 point = $1 dollar. Simple as that!</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Anytime you are short on points, simply “Recharge” them.</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
+                                                            </ul>
+                                                        </div>
+                                                        <a id="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
+                                                    </div>
+                                                    <div class="step-box">
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                         <div class="step-btn"  style=" background: #ffad42;">STEP 2</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 260px" src="<?php echo get_template_directory_uri(); ?>/library/images/07_Step2.jpg">
+                                                        <div>
+                                                            <p class="tit-getting">What and when do you want your schedule to be?</p>
+                                                            <ul class="list-getting">
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>There are two ways to make a schedule. Through “<u>Find Tutor Page</u>” or “<u>Schedule Page</u>”</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Find Tutor Page: To set a schedule, a student defines “<u>Subject</u>”, “<u>Date</u>”, and “<u>Other Parameters</u>” from the search area. </li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Schedule Page: From the calendar, select the “<u>Date</u>”, then it will take you to the “Fnd Tutor Page”. From there, finish the remaining parameters</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Now you are almost ready to meet your tutor! </li>
+                                                            </ul>
+
+                                                            <div class="go-to-find link-getting" style="color: #ffad42;">Go to Find Tutor Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
+                                                            <div id="go-to-schedule" class="link-getting" style="color: #ffad42;">Go to Schedule Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="step-box">
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                        <div class="step-btn"  style=" background: #ff6d6d;">STEP 3</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 250px" src="<?php echo get_template_directory_uri(); ?>/library/images/08_Step3.jpg">
+                                                        <p class="tit-getting">It’s time to select the right tutor!</p>
+                                                        <ul class="list-getting">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Once Preference is set, click on “<u>Search</u>”. Now you will be presented with “<u>Lists of Tutors</u>”.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Alternatively, go to “<u>Available Tutor List</u>”, if you don’t have any preference.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Before finalizing a tutor, you can check their details like, “<u>Marketing Words</u>”, “<u>Background</u>”, “<u>Reviews</u>”, and “<u>Scheduling Status</u>”. These will help you to decide the right tutor for your schedule.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>When everything looks good, make a schedule by clicking on the “<u>Schedule Button</u>”.</li>
+
+                                                        </ul>
+                                                        <div class="link-getting go-to-find-tutor" style="color: #ff6d6d;">Go to Available Tutor List &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Step3.png"></div>
+                                                        <div class="go-to-find link-getting" style="color: #ff6d6d;">Go to Find Tutor Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Step3.png"></div>
+                                                    </div>
+                                                    <div class="step-box" style="border: 0">
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                        <div class="step-btn"  style=" background: #65d02a;">STEP 4</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 309px" src="<?php echo get_template_directory_uri(); ?>/library/images/09_Step4.jpg">
+                                                        <p class="tit-getting">What to expect after everything is set.</p>
+                                                        <ul class="list-getting">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>At this point, students need to wait for the tutor to “<u>Confirm</u>” the schedule.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>When confirmed, both tutor and student meet up at the “<u>Online Tutoring Notepad</u>” from the appointed time. </li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>For whatever reason, if the tutor hasn’t confirmed yet, students have the option to “<u>Cancel</u>” the schedule. </li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>All the schedule status can be checked from the student's “<u>Schedule Detailed Page</u>”. </li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s it! Enjoy your online tutoring! </li>
+
+                                                        </ul>
+                                                        <div id=go-to-all class="link-getting" style="color: #65d02a;">Go to Schedule Detail Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div>
+                                                        <a href="https://notepad.iktutor.com/" target="_bank"><div class="link-getting" style="color: #65d02a;">Go to Online Tutoring Notepad &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div></a>
+                                                    </div>
+
+                                                </div>
                                                 <div class="section-tutor-main">
                                                     <div class="border-selectall color-border">
                                                         <button type="button" class="btn-sub-tab active" name="available_now" id="btn-available-now">
@@ -3137,6 +3217,7 @@
                                     </div>
                                 </div>
                             </div> 
+
                             <div id="english-main" class="tab-pane fade">
                                 <div class="student-center">
                                     <div class="row">
@@ -6950,7 +7031,35 @@
                         $("#sub-status").removeClass('active');
                         $("#sub-schedule-li").removeClass('active');
                         $('#purchase-points').removeClass('active in');
+                        $(".english-conver").css("display","none");
                     });
+                    $('#native-speaker').click(function(){
+                        $(".english-conver").css("display","block");
+                        $(".getting-tutor-main").css("display","none");
+                        $(".main-my-schedule").css("display","none");
+                        $(".section-tutor-main").css("display","none");
+                        $(".main-status-request").css("display","none");
+                       $('.header-title-newschedule').css("display","none");
+                       $("#getting-tutoring").addClass('active');
+                        $('.new-request-list').text('GETTING TUTORING'); 
+                        $("#create-account").removeClass("active");
+                        $("#create-account").removeClass("in");
+                        $("#login-user").removeClass("active");
+                        $("#login-user").removeClass("in");
+                        $("#updateinfo").removeClass("active");
+                        $("#updateinfo").removeClass("in");
+                        $("#subscription").removeClass("active");
+                        $("#subscription").removeClass("in");
+                        $("#profile").removeClass("active");
+                        $("#profile").removeClass("in");
+                        $("#tutoring-main").addClass("active");
+                        $("#tutoring-main").addClass("in");
+                        $("#sub-findingtutor").removeClass('active');
+                        $("#sub-status").removeClass('active');
+                        $("#sub-schedule-li").removeClass('active');
+                        $('#purchase-points').removeClass('active in');
+                    });
+
 
                     $('.go-to-find-tutor').click(function(){
 
@@ -8197,6 +8306,7 @@
                         $("#getting-tutoring").addClass('active');
                         $('.new-request-list').text('GETTING TUTORING');    
                     });
+
                     $("#btn-note").click(function(){
                         window.open('https://notepad.iktutor.com');
                     });
