@@ -4845,10 +4845,15 @@ main.home .table-row .col-md-5.cell {
     display: inline-block;
 }
 
+#headword {
+    font-weight: bold;
+}
+
 #flash-cards #headword {
     font-size: 26px;
     padding-left: 10px;
     font-family: semibold;
+
 }
 
 #flash-cards #pronunciation,
