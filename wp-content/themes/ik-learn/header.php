@@ -5920,7 +5920,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "61px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");                              
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "-2px");                              
                         
                     }
                     });
@@ -6009,7 +6009,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "59px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "-1px");
                         
                         }
                         $('#icon-free').css("display", "block");  
@@ -6049,7 +6049,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "-2px");
                        
                         }
                         $('#icon-free').css("display", "block");
@@ -6088,7 +6088,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                        
                         }
                         $('#icon-free').css("display", "block"); 
