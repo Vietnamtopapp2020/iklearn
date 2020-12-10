@@ -84,9 +84,9 @@ var change = false;
                     if (!v.memorized) {
                         flashs.push(v);
                     }
-                    if(v.dict_id == 6)
-                        s = 'style="color: red;"';
-                    else s ='';
+                    if(v.stt == 1)
+                        s = 'style="color: red; data-stt="0";';
+                    else s = ' data-stt="1";';
                     m = v.memorized == 1 ? "<span class='icon-yes2'></span>" : "<span class='icon-no2'></span>";
                     rows += '<tr>' +
                             '<td class="fh"'+s+'>' + v.word + '</td>' +
@@ -136,22 +136,82 @@ var change = false;
             }
         }
 
-        $(document).ready(function(){
-            $('.fh').click(function (e) {
-            e.preventDefault();
+        $('.fh').live('click', function (e) {
+            var stt = $(this).attr('data-stt');
+            var word = $(this).text();
             var a = $(this).parent().find("a");
+            var id = a.attr("data-id");
+            if(stt == 1){
+            e.preventDefault();
+
             
             $.get(home_url + "/?r=ajax/flashcard/lookup", {id: a.attr("data-id")}, function (data) {
                 $("#dictionary-block").show();
                 $("#dictionary-block").html(data);
 
             });
-            });
+            }else{
+                $("#dictionary-block").show();
+                $("#dictionary-block").html('The word is not in the dictionary. Change Spelling? <span class="edit-word" data-word="'+word+'" data-id="'+id+'">Edit Now!</span>');
+            }
+        });
+        $('.edit-word').live('click', function (e) {
+            var word = $(this).attr('data-word');
+            var a = $(this).attr("data-id");
+            $('#edit-word-box').css('display','block');
+            $('#word-edit').val(word);
+            $('#word-edit').attr('data-word',word);
+            $('#word-edit').attr('data-id',a);
+            $('.back-deep').css('display','block');
+        });
+        $('#word-edit-btn').click(function(){
+            var word = $('#word-edit').val();
+            var id = $('#word-edit').attr('data-id');
+            var word_old = $('#word-edit').attr('data-word');
+            if(word == ''){
+                       $('#word-edit').popover({content: '<span class="text-danger">' +'You have not entered a word.'+ '</span>', html: true, trigger: "hover", placement: "bottom"}).popover("show");
+                        setTimeout(function () {
+                            $('#word-add').popover("destroy");
+                        },2000);
+                    }else{
+
+                        $.get(home_url + "/?r=ajax/editcard", {word: word, id: id}, function (data) {
+                            
+                            data = JSON.parse(data);
+                            if(data.status == 1){
+                                var arr = $(".fh");
+                                arr.each(function (index) {
+                                   if($(this).text() == word_old){
+                                        if(data.stt == 0){
+                                            $(this).css('color','red'); 
+                                        }else{
+                                            $(this).css('color','black'); 
+                                        }
+                                        $(this).text(word);
+                                        $(this).attr('data-stt',data.stt);
+                                        $(this).click();
+                                        return false;
+                                   }
+                                });
+                            $('#edit-word-box').css('display','none');
+                            $('.back-deep').css('display','none');
+                                
+                            }else if(data.status == 3){
+                                $('#word-edit').popover({content: '<span class="text-danger">' +'Word already exists.'+ '</span>', html: true, trigger: "hover", placement: "bottom"}).popover("show");
+                                setTimeout(function () {
+                                    $('#word-add').popover("destroy");
+                                },2000);
+                            }
+                            
+                        });
+                    }
+        })
+
             $('.back-deep').click(function () {
                 $('.back-deep').css('display','none');
-                $('#flashcard-modal,#require-modal,#fl-create-folder-modal,#create-folder-success,#message-full-memorized,#fl-delete-folder-modal,#modal-message-not-delete,#require-modal1,#modal-sub-dictionary,#add-word-box').css('display','none');
+                $('#flashcard-modal,#require-modal,#fl-create-folder-modal,#create-folder-success,#message-full-memorized,#fl-delete-folder-modal,#modal-message-not-delete,#require-modal1,#modal-sub-dictionary,#add-word-box,#edit-word-box').css('display','none');
             });
-        });
+        
 
         
         
@@ -211,15 +271,20 @@ var change = false;
                         setTimeout(function () {
                             $('#word-add').popover("destroy");
                         },2000);
-                    }else{
+                    }else{ 
                         $.get(home_url + "/?r=ajax/addcard2", {word: word, folder:folder}, function (data) {
                             
                             data = JSON.parse(data);
-                                        
+                            if(data.check == 0){
+                                var style='style="color:red;"';
+                            }else{
+                                var style = '' ;  
+                            }        
                             if(data.status == 1){
+
                                 var rows ='';
                                 rows += '<tr>' +
-                            '<td class="fh" style="color:red;">' + word + '</td>' +
+                            '<td class="fh" '+style+' data-stt="'+data.check+'">' + word + '</td>' +
                             '<td><input type="text" class="flashcard-note" data-id="' + data.id + '" autocomplete="off" value=""></td>' +
                             '<td><a class="toggle-memorized" data-id="' + data.id + '" href="#"><span class="icon-no2"></span></a></td>' +
                             '<td><a href="#" data-id="' + data.id + '" class="delete-card"><u>delete</u>&nbsp;&nbsp;<img src="'+url_image+'icon_remove.png"></a></td>' +
@@ -390,6 +455,10 @@ var change = false;
         });
         $('#close-add, #cls-adw').click(function(){
             $("#add-word-box").css('display','none');
+            $('.back-deep').css('display','none');
+        });
+        $('#close-edit, #cls-fdw').click(function(){
+            $("#edit-word-box").css('display','none');
             $('.back-deep').css('display','none');
         });
         $('#create-ok, #cls-succ').click(function (){

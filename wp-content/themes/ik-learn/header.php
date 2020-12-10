@@ -2285,6 +2285,86 @@
                                                     </div>
 
                                                 </div>
+                                                <div class="english-conver" style="display: none; margin-left: -34px;">
+                                                    <div class="step-box">
+                                                        
+                                                        <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/05_Title_Image.jpg">
+                                                        <div style=" float: right; width: 400px;">
+                                                            <br>
+                                                            <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">Welcome to iktutor.com! Let’s get you started with the tutoring.</span>
+                                                            <br><br>
+                                                            <span style="font-family: Myriad_light; color: #8a8a8a;font-size: 17px; ">These 4 Steps of Quick Start Guide will help you through how to get into Online Tutoring with the basics that you need to know.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="step-box" >
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                        <div class="step-btn" style=" background: #58aec8;">STEP 1</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 305px" src="<?php echo get_template_directory_uri(); ?>/library/images/06_Step1.jpg">
+                                                        <div>
+                                                            <p class="tit-getting">Do you have enough points for <br>tutoring? If not, here’s what <br>you can do!</p>
+                                                            <ul class="list-getting">
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>You will spend points to schedule a Tutoring.</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>1 point = $1 dollar. Simple as that!</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Anytime you are short on points, simply “Recharge” them.</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
+                                                            </ul>
+                                                        </div>
+                                                        <a id="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
+                                                    </div>
+                                                    <div class="step-box">
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                         <div class="step-btn"  style=" background: #ffad42;">STEP 2</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 260px" src="<?php echo get_template_directory_uri(); ?>/library/images/07_Step2.jpg">
+                                                        <div>
+                                                            <p class="tit-getting">What and when do you want your schedule to be?</p>
+                                                            <ul class="list-getting">
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>There are two ways to make a schedule. Through “<u>Find Tutor Page</u>” or “<u>Schedule Page</u>”</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Find Tutor Page: To set a schedule, a student defines “<u>Subject</u>”, “<u>Date</u>”, and “<u>Other Parameters</u>” from the search area. </li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Schedule Page: From the calendar, select the “<u>Date</u>”, then it will take you to the “Fnd Tutor Page”. From there, finish the remaining parameters</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Now you are almost ready to meet your tutor! </li>
+                                                            </ul>
+
+                                                            <div class="go-to-find link-getting" style="color: #ffad42;">Go to Find Tutor Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
+                                                            <div id="go-to-schedule" class="link-getting" style="color: #ffad42;">Go to Schedule Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="step-box">
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                        <div class="step-btn"  style=" background: #ff6d6d;">STEP 3</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 250px" src="<?php echo get_template_directory_uri(); ?>/library/images/08_Step3.jpg">
+                                                        <p class="tit-getting">It’s time to select the right tutor!</p>
+                                                        <ul class="list-getting">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Once Preference is set, click on “<u>Search</u>”. Now you will be presented with “<u>Lists of Tutors</u>”.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Alternatively, go to “<u>Available Tutor List</u>”, if you don’t have any preference.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Before finalizing a tutor, you can check their details like, “<u>Marketing Words</u>”, “<u>Background</u>”, “<u>Reviews</u>”, and “<u>Scheduling Status</u>”. These will help you to decide the right tutor for your schedule.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>When everything looks good, make a schedule by clicking on the “<u>Schedule Button</u>”.</li>
+
+                                                        </ul>
+                                                        <div class="link-getting go-to-find-tutor" style="color: #ff6d6d;">Go to Available Tutor List &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Step3.png"></div>
+                                                        <div class="go-to-find link-getting" style="color: #ff6d6d;">Go to Find Tutor Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Step3.png"></div>
+                                                    </div>
+                                                    <div class="step-box" style="border: 0">
+                                                        <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
+                                                        <div class="step-btn"  style=" background: #65d02a;">STEP 4</div>
+                                                        <br>
+                                                        <img class="getting-img" style="width: 309px" src="<?php echo get_template_directory_uri(); ?>/library/images/09_Step4.jpg">
+                                                        <p class="tit-getting">What to expect after everything is set.</p>
+                                                        <ul class="list-getting">
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>At this point, students need to wait for the tutor to “<u>Confirm</u>” the schedule.</li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>When confirmed, both tutor and student meet up at the “<u>Online Tutoring Notepad</u>” from the appointed time. </li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>For whatever reason, if the tutor hasn’t confirmed yet, students have the option to “<u>Cancel</u>” the schedule. </li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>All the schedule status can be checked from the student's “<u>Schedule Detailed Page</u>”. </li>
+                                                            <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s it! Enjoy your online tutoring! </li>
+
+                                                        </ul>
+                                                        <div id=go-to-all class="link-getting" style="color: #65d02a;">Go to Schedule Detail Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div>
+                                                        <a href="https://notepad.iktutor.com/" target="_bank"><div class="link-getting" style="color: #65d02a;">Go to Online Tutoring Notepad &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div></a>
+                                                    </div>
+
+                                                </div>
                                                 <div class="section-tutor-main">
                                                     <div class="border-selectall color-border">
                                                         <button type="button" class="btn-sub-tab active" name="available_now" id="btn-available-now">
@@ -3137,6 +3217,7 @@
                                     </div>
                                 </div>
                             </div> 
+
                             <div id="english-main" class="tab-pane fade">
                                 <div class="student-center">
                                     <div class="row">
@@ -3291,7 +3372,7 @@
             foreach($flashcards as $flashcard)
             {
                 if($flashcard->folder_id == $folder->id) {
-                    $a[] = 'w' . $flashcard->id . ': {word_id: "' . $flashcard->id . '", word: ' . json_encode($flashcard->word) . ', memorized: ' . $flashcard->memorized . ', notes: ' . json_encode($flashcard->notes) . ', dict_id: '. $flashcard->dictionary_id .'}';
+                    $a[] = 'w' . $flashcard->id . ': {word_id: "' . $flashcard->id . '", word: ' . json_encode($flashcard->word) . ', memorized: ' . $flashcard->memorized . ', notes: ' . json_encode($flashcard->notes) . ', dict_id: '. $flashcard->dictionary_id .', stt: '. $flashcard->stt .'}';
                     //array_push($array_memory, $flashcard->memorized);
                 }
             }
@@ -3670,6 +3751,45 @@
                     <div class="col-sm-6" style="padding-left: 2px !important;">
                         <div class="form-group" style="margin-bottom: 3px;">
                             <button style="background: #cecece;" type="button" id="close-add" class="border-btn btn-dark-blue"><?php _e('CANCEL', 'iii-dictionary') ?></button>
+                        </div>
+                    </div>
+                                      
+                </div>
+            </div>      
+        </div>
+    </div>
+</div>
+<div id="edit-word-box" class="" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="fl-header-box">
+                
+                <span><?php _e('EDIT WORD', 'iii-dictionary') ?></span>
+                <img id="cls-fdw" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Not_Available.png">
+            </div>
+            <div id="edit-word-dics" class="fl-cent-box" style="font-size: 16px; color: black;">
+                <div class="find-general-border mt-top-18">
+                    <div class="form-group">
+                        <span class="find-label">Edit<span class="required-star"> *</span></span>
+                         <input type="text" class="form-control" id="word-edit" style="height:42px" autocomplete="off" >
+                        <div class="clear-input" onclick="document.getElementById('word-edit').value=null;"></div>
+                        
+                    </div>
+                </div>
+                
+                <div style="border-top: 1px solid #d9d9d9; padding-top: 15px; margin-top: 25px; ">Do you want to add new words to the dictionary? <a class="sub-dictionary-now" style="color: #ff8283;"> Subscribe Dictionary Now.</a></div>
+                    
+            </div>
+            <div class="fl-bot-box">
+                <div class="row">
+                    <div class="col-sm-6" style="padding-right: 1px !important;">
+                        <div class="form-group" style="margin-bottom: 3px;">
+                            <button style="background: #58aec7;" type="button" class="border-btn btn-dark-blue" id="word-edit-btn" ><?php _e('SAVE', 'iii-dictionary') ?></button>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="padding-left: 2px !important;">
+                        <div class="form-group" style="margin-bottom: 3px;">
+                            <button style="background: #cecece;" type="button" id="close-edit" class="border-btn btn-dark-blue"><?php _e('CANCEL', 'iii-dictionary') ?></button>
                         </div>
                     </div>
                                       
@@ -4169,7 +4289,7 @@
                                             <li id="getting-tutoring"><a id="tutor-main-home" class="redirect-create" data-toggle="tab" href="#tutoring-main">Getting Tutoring<img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png"></a></li>
                                             <li id="native-speaker"><a id="" class="redirect-create" data-toggle="tab" href="#tutoring-main">English Conversation<br>with Native Speaker<img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png"></a></li>
                                             <li id="sub-findingtutor" ><a class="redirect-create" data-toggle="tab" href="#tutoring-main">Find a Tutor<img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png"></a></li>
-                                            <ul id="find-course" style="display: none; padding-left: 15px;">
+                                            <ul id="find-course" style="display: none; ">
                                                 <li class="onl-math" data-type="english-conv"><img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png" style="width: 8px !important">&nbsp;&nbsp;<a  data-toggle="tab"  >English Conversation</a> </li>
                                                 <li class="onl-math" data-type="english-wri"><img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png" style="width: 8px !important">&nbsp;&nbsp;<a  data-toggle="tab" >English Writing</a></li>
                                                 <li class="onl-math" data-type="math"><img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png" style="width: 8px !important">&nbsp;&nbsp;<a data-toggle="tab"  >Math</a></li>
@@ -6007,7 +6127,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            // $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "0px");
                             
                              
                         
@@ -6028,7 +6148,8 @@
                             $('#icon-tutoring div:nth-child(5)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(7)').css("margin-top", "23px");                            
-                        $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "0px");
+                        $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "2px");
+                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "0px");
                         $('#sub-findingtutor img').attr("src","<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_open_state.png");                        
                         $('#sub-findingtutor img').css('padding','0');                         
                         // 
@@ -6044,7 +6165,7 @@
                             $('#icon-tutoring div:nth-child(5)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-tutoring div:nth-child(7)').css("margin-top", "23px");                            
-                        $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "0px");
+                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "0px");
                         }
                     });
                     $('#sat-mat').click(function(){
@@ -6910,7 +7031,35 @@
                         $("#sub-status").removeClass('active');
                         $("#sub-schedule-li").removeClass('active');
                         $('#purchase-points').removeClass('active in');
+                        $(".english-conver").css("display","none");
                     });
+                    $('#native-speaker').click(function(){
+                        $(".english-conver").css("display","block");
+                        $(".getting-tutor-main").css("display","none");
+                        $(".main-my-schedule").css("display","none");
+                        $(".section-tutor-main").css("display","none");
+                        $(".main-status-request").css("display","none");
+                       $('.header-title-newschedule').css("display","none");
+                       $("#getting-tutoring").addClass('active');
+                        $('.new-request-list').text('GETTING TUTORING'); 
+                        $("#create-account").removeClass("active");
+                        $("#create-account").removeClass("in");
+                        $("#login-user").removeClass("active");
+                        $("#login-user").removeClass("in");
+                        $("#updateinfo").removeClass("active");
+                        $("#updateinfo").removeClass("in");
+                        $("#subscription").removeClass("active");
+                        $("#subscription").removeClass("in");
+                        $("#profile").removeClass("active");
+                        $("#profile").removeClass("in");
+                        $("#tutoring-main").addClass("active");
+                        $("#tutoring-main").addClass("in");
+                        $("#sub-findingtutor").removeClass('active');
+                        $("#sub-status").removeClass('active');
+                        $("#sub-schedule-li").removeClass('active');
+                        $('#purchase-points').removeClass('active in');
+                    });
+
 
                     $('.go-to-find-tutor').click(function(){
 
@@ -8158,6 +8307,7 @@
                         $("#getting-tutoring").addClass('active');
                         $('.new-request-list').text('GETTING TUTORING');    
                     });
+
                     $("#btn-note").click(function(){
                         window.open('https://notepad.iktutor.com');
                     });
@@ -11767,6 +11917,9 @@
                         
                        
                     });
+                    $('.section-right').click(function(){
+                    closeNav()
+                });
                     $(".student-center").click( function (e){
                         closeNav();
                          $("#open-menu-schedule").css("display","none");
@@ -13822,7 +13975,7 @@
                         }
                         $('#menu-left-myaccount li:nth-child(2)').css("margin-top", "0");
                         $('#menu-left-myaccount li:nth-child(3)').css("margin-top", "3px");
-                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "8px");
+                        $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "2px");
                         $('#menu-left-myaccount li:nth-child(5)').css("margin-top", "5px");
                         $('#menu-left-myaccount li:nth-child(6)').css("margin-top", "6px");
 
@@ -13955,7 +14108,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "2px");
                     }
                     function change_image_list(x,y) {
                         x.attr('src','<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN_normal_state.png');
@@ -15395,6 +15548,7 @@
             }
             
             });
+
              $(document).ready(function() {
                 $.get(home_url + "/?r=ajax/checkname", {}, function (data) {
                         data = JSON.parse(data);       
