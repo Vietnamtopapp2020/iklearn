@@ -4848,6 +4848,7 @@ main.home .table-row .col-md-5.cell {
 #flash-cards #headword {
     font-size: 26px;
     padding-left: 10px;
+    font-family: semibold;
 }
 
 #flash-cards #pronunciation,
@@ -24301,7 +24302,7 @@ padding-left: 20px;
 #fl-create-folder-modal, #flashcard-modal, #require-modal,
 #create-folder-success,#message-full-memorized,
 #modal-message-not-delete,#require-modal1,#fl-delete-folder-modal,
-#modal-sub-dictionary, #add-word-box {
+#modal-sub-dictionary, #add-word-box, #edit-word-box {
     position: absolute;
     top: 130px;
     display: none;
@@ -24327,6 +24328,10 @@ padding-left: 20px;
 }
 .fl-bot-box {
         padding: 0 3px;
+}
+.fl-bot-box .border-btn{
+    border-radius: 0 !important;
+    height: 39px;
 }
 .back-deep {
 
@@ -24368,4 +24373,9 @@ padding-left: 20px;
     margin-top: 20px;
     cursor: pointer;
     z-index: 10;
+}
+.edit-word {
+    color: #36a93f;
+    text-decoration-line: underline;
+    cursor: pointer;
 }
