@@ -8047,6 +8047,7 @@ if ($task == 'editcard') {
         $id = $_REQUEST['id'];
         $arr = $wpdb->get_col('SELECT word FROM ' . $wpdb->prefix . 'dict_flashcards WHERE created_by = ' . $current_user_id);
         $arr2 = $wpdb->get_col('SELECT entry FROM ' . $wpdb->prefix . 'dict_elearner');
+        $found = array_search($entry, $arr2);
         if($found !== FALSE){
                 $stt = 0;
                 $stt2 = 1;
