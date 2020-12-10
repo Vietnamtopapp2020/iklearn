@@ -15323,6 +15323,7 @@
                 $('#add-word').click(function(){
                     $('.back-deep').css('display','block');   
                         $('#add-word-box').css('display','block'); 
+                        $('#word-add').val('');
                 });
                 
                 $('#sandbox-calender-tutor').ready(function(){
