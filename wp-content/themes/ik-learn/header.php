@@ -55,11 +55,11 @@
  
     }
     // dùng cho server
-    // $ip_user = $_SERVER['REMOTE_ADDR'];
-    // $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
+    $ip_user = $_SERVER['REMOTE_ADDR'];
+    $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
     
     //dùng cho localhost
-    $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
+    // $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
     // 
     $time_zone_user1 = $time_zone_user->city;
     $timezone_name = $time_zone_user->timezone;
@@ -2230,7 +2230,7 @@
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
                                                             </ul>
                                                         </div>
-                                                        <a id="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
+                                                        <a class="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
@@ -2247,7 +2247,7 @@
                                                             </ul>
 
                                                             <div class="go-to-find link-getting" style="color: #ffad42;">Go to Find Tutor Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
-                                                            <div id="go-to-schedule" class="link-getting" style="color: #ffad42;">Go to Schedule Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
+                                                            <div class="go-to-schedule link-getting" style="color: #ffad42;">Go to Schedule Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
                                                         </div>
                                                     </div>
                                                     <div class="step-box">
@@ -2280,20 +2280,32 @@
                                                             <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s it! Enjoy your online tutoring! </li>
 
                                                         </ul>
-                                                        <div id=go-to-all class="link-getting" style="color: #65d02a;">Go to Schedule Detail Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div>
+                                                        <div class="go-to-all link-getting"  style="color: #65d02a;">Go to Schedule Detail Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div>
                                                         <a href="https://notepad.iktutor.com/" target="_bank"><div class="link-getting" style="color: #65d02a;">Go to Online Tutoring Notepad &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div></a>
                                                     </div>
 
                                                 </div>
                                                 <div class="english-conver" style="display: none; margin-left: -34px;">
-                                                    <div class="step-box">
+                                                    <div class="step-box" style="height: 360px">
                                                         
-                                                        <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/05_Title_Image.jpg">
+                                                        <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/IMG_English_Conversation_Main.jpg">
                                                         <div style=" float: right; width: 400px;">
-                                                            <br>
-                                                            <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">Welcome to iktutor.com! Let’s get you started with the tutoring.</span>
+                                                            
+                                                            <span style="font-family: Myriad_light; color: #cba015;  font-size: 29px;" >Let’s get you started with</span>
+                                                            <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">English Conversation Practice</span>
                                                             <br><br>
-                                                            <span style="font-family: Myriad_light; color: #8a8a8a;font-size: 17px; ">These 4 Steps of Quick Start Guide will help you through how to get into Online Tutoring with the basics that you need to know.</span>
+                                                            <div>
+                                                                <span class="tit-getting-new">This is great starting points for:</span>
+                                                                <ul class="list-getting">
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEIC Preparation Program</li>
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEFL Preparation Program</li>
+                                                                    
+                                                                </ul>
+                                                                <img style="width: 7px" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
+                                                                <span style="color: #8a8a8a; font-size: 17px;padding-left: 10px;">Get Start!</span>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="step-box" >
@@ -2310,7 +2322,7 @@
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
                                                             </ul>
                                                         </div>
-                                                        <a id="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
+                                                        <a class="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
@@ -2327,7 +2339,7 @@
                                                             </ul>
 
                                                             <div class="go-to-find link-getting" style="color: #ffad42;">Go to Find Tutor Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
-                                                            <div id="go-to-schedule" class="link-getting" style="color: #ffad42;">Go to Schedule Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
+                                                            <div class="go-to-schedule link-getting" style="color: #ffad42;">Go to Schedule Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/02_Icon_Step2.png"></div>
                                                         </div>
                                                     </div>
                                                     <div class="step-box">
@@ -2335,7 +2347,7 @@
                                                         <div class="step-btn"  style=" background: #ff6d6d;">STEP 3</div>
                                                         <br>
                                                         <img class="getting-img" style="width: 250px" src="<?php echo get_template_directory_uri(); ?>/library/images/08_Step3.jpg">
-                                                        <p class="tit-getting">It’s time to select the right tutor!</p>
+                                                        <p class="tit-getting">It’s time to select the right English Conversation Teacher</p>
                                                         <ul class="list-getting">
                                                             <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Once Preference is set, click on “<u>Search</u>”. Now you will be presented with “<u>Lists of Tutors</u>”.</li>
                                                             <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Alternatively, go to “<u>Available Tutor List</u>”, if you don’t have any preference.</li>
@@ -2360,7 +2372,7 @@
                                                             <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s it! Enjoy your online tutoring! </li>
 
                                                         </ul>
-                                                        <div id=go-to-all class="link-getting" style="color: #65d02a;">Go to Schedule Detail Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div>
+                                                        <div class="go-to-all link-getting" style="color: #65d02a;">Go to Schedule Detail Page &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div>
                                                         <a href="https://notepad.iktutor.com/" target="_bank"><div class="link-getting" style="color: #65d02a;">Go to Online Tutoring Notepad &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/04_Icon_Step4.png"></div></a>
                                                     </div>
 
@@ -4978,7 +4990,7 @@
                     }
                     
 
-                    $('#go-to-schedule').click(function(){
+                    $('.go-to-schedule').click(function(){
                         var day = $('#today-tutor').val();
                         closeNav();
                         $('.new-request-list').text('SCHEDULE');      
@@ -5101,7 +5113,7 @@
                     
                     });
 
-                    $('#go-to-point').click(function(){
+                    $('.go-to-point').click(function(){
                         var getprofile = window.location.href;                
                         if(getprofile == 'https://iktutor.com/iklearn/en/?r=my-account#my-account-modal'){
                         $("#my-account-modal").modal('hide');
@@ -5920,7 +5932,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "61px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");                              
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");                              
                         
                     }
                     });
@@ -6009,7 +6021,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "59px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                         
                         }
                         $('#icon-free').css("display", "block");  
@@ -6049,7 +6061,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                        
                         }
                         $('#icon-free').css("display", "block");
@@ -6088,7 +6100,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                        
                         }
                         $('#icon-free').css("display", "block"); 
@@ -6183,7 +6195,7 @@
                             $('#icon-free div:nth-child(3)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(4)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(5)').css("margin-top", "59px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                         }else{
                             $('#list-sat-mat').css('display','block');
                             $('#sat-mat img').attr("src","<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_open_state.png");                        
@@ -6192,7 +6204,7 @@
                             $('#icon-free div:nth-child(3)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(4)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(5)').css("margin-top", "172px"); 
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                         }
 
                     });
@@ -6210,7 +6222,7 @@
                             $('#icon-free div:nth-child(3)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(4)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(5)').css("margin-top", "59px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
                             
                         }else{
                             
@@ -6221,7 +6233,7 @@
                             $('#icon-free div:nth-child(3)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(4)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(5)').css("margin-top", "172px");  
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "20px"); 
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px"); 
                         }
 
                     });
@@ -7041,7 +7053,7 @@
                         $(".main-status-request").css("display","none");
                        $('.header-title-newschedule').css("display","none");
                        $("#getting-tutoring").addClass('active');
-                        $('.new-request-list').text('GETTING TUTORING'); 
+                        $('.new-request-list').text('ENGLISH CONVERSATION WITH NATIVE SPEAKER'); 
                         $("#create-account").removeClass("active");
                         $("#create-account").removeClass("in");
                         $("#login-user").removeClass("active");
@@ -8432,7 +8444,7 @@
                         }
                     });
 
-                    $("#go-to-all").click(function(){   
+                    $(".go-to-all").click(function(){   
                         var day = $('#today-tutor').val();
                         closeNav();
                         $('.new-request-list').text('SCHEDULE');      
@@ -15319,7 +15331,8 @@
                 });
                 $('#add-word').click(function(){
                     $('.back-deep').css('display','block');   
-                        $('#add-word-box').css('display','block'); 
+                    $('#add-word-box').css('display','block'); 
+                    $('#word-add').val('');
                 });
                 
                 $('#sandbox-calender-tutor').ready(function(){
