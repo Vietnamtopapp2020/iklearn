@@ -2286,7 +2286,7 @@
 
                                                 </div>
                                                 <div class="english-conver" style="display: none; margin-left: -34px;">
-                                                    <div class="step-box" style="height: 360px">
+                                                    <div class="step-box" style="height: 360px; margin-top:-17px !important; ">
                                                         
                                                         <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/IMG_English_Conversation_Main.jpg">
                                                         <div style=" float: right; width: 400px;">
@@ -2294,13 +2294,13 @@
                                                             <span style="font-family: Myriad_light; color: #cba015;  font-size: 29px;" >Let’s get you started with</span>
                                                             <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">English Conversation Practice</span>
                                                             <br><br>
-                                                            <div>
+                                                            <div style="margin-top: -9px;">
                                                                 <span class="tit-getting-new">This is great starting points for:</span>
-                                                                <ul class="list-getting">
-                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
-                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEIC Preparation Program</li>
-                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEFL Preparation Program</li>
-
+                                                                <ul class="list-getting list-getting-info">
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li style="  margin-top:3px; margin-bottom: 0">Beginner to Advanced Conversation practice</li>    
+                                                                    <img style="margin-top: -4px;" src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png">
+                                                                    <li style="  margin-top: -5px; margin-bottom: 0">TOEIC Preparation Program</li>    
+                                                                    <img style="margin-top: -5px" src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li style="  margin-top: -5px; margin-bottom: 5px">TOEFL Preparation Program</li>
                                                                 </ul>
                                                                 <img style="width: 7px" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
                                                                 <span style="color: #8a8a8a; font-size: 17px;padding-left: 10px;">Get Start!</span>

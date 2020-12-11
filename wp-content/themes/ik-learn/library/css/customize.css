@@ -18796,7 +18796,7 @@ header .user-nav > li:nth-child(2){
 #online-learning .container-acc-login-signup-online {
     margin-top:0px !important;
     margin-bottom: 30px !important;
-};
+}
 #my-account .article-header {
     background : #fff !important;
 }
@@ -20394,8 +20394,8 @@ span.select-box-it.form-control, span.select-box-it.form-control > span {
 }
 .book-mark{
      z-index: 1;
-     height: 15px important!;
-     width: 15px important!;
+     height: 15px !important;
+     width: 15px !important;
 }
 #avatar{
     z-index: 0;
@@ -23804,6 +23804,7 @@ padding: 5px;
 width: 450px;
 padding-left: 20px;
 }
+
 .link-getting {
     padding-top: 20px; 
     font-size: 19px;
@@ -24384,3 +24385,4 @@ padding-left: 20px;
     text-decoration-line: underline;
     cursor: pointer;
 }
+
