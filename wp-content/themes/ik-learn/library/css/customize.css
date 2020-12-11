@@ -23804,6 +23804,13 @@ padding: 5px;
 width: 450px;
 padding-left: 20px;
 }
+.list-top li{
+    padding: 0 !important;
+}
+.list-top img{
+    padding-top: 8px !important;
+}
+
 .link-getting {
     padding-top: 20px; 
     font-size: 19px;

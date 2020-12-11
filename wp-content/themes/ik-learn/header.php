@@ -2286,7 +2286,7 @@
 
                                                 </div>
                                                 <div class="english-conver" style="display: none; margin-left: -34px;">
-                                                    <div class="step-box" style="height: 360px">
+                                                    <div class="step-box" style="height: 358px">
                                                         
                                                         <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/IMG_English_Conversation_Main.jpg">
                                                         <div style=" float: right; width: 400px;">
@@ -2296,14 +2296,17 @@
                                                             <br><br>
                                                             <div>
                                                                 <span class="tit-getting-new">This is great starting points for:</span>
-                                                                <ul class="list-getting">
+                                                                <ul class="list-getting list-top">
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEIC Preparation Program</li>
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEFL Preparation Program</li>
                                                                     
                                                                 </ul>
-                                                                <img style="width: 7px" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
+                                                                <div style="padding-top: 10px">
+                                                                <img style="width: 7px; padding-bottom: 5px;" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
+                                                                
                                                                 <span style="color: #8a8a8a; font-size: 17px;padding-left: 10px;">Get Start!</span>
+                                                                </div>
                                                             </div>
 
                                                         </div>
@@ -4781,6 +4784,18 @@
                         $("#lost-password").addClass("hidden");
                         $("#create-account").removeClass("active");
                         $("#create-account").removeClass("in");
+                }else if(getprofile == 'https://iktutor.com/iklearn/en/#signup'){
+                        $("#my-account-modal").modal('show');
+                        $("#login-user").removeClass("active");
+                        $("#login-user").removeClass("in");
+                        $("#lost-password").removeClass("active");
+                        $("#lost-password").removeClass("in");
+                        $("#create-account").addClass("active");
+                        $("#create-account").addClass("in");
+
+                        var img = '<?php echo get_template_directory_uri() ?>/library/images/Profile_Image.png';
+                        $("#user-upload-avatar").attr('src',img);
+                    
                 }
             });
                 $(function () {
@@ -15333,6 +15348,7 @@
                     $('.back-deep').css('display','block');   
                     $('#add-word-box').css('display','block'); 
                     $('#word-add').val('');
+                    $('#dictionary-block').css('display','none');
                 });
                 
                 $('#sandbox-calender-tutor').ready(function(){
