@@ -4845,16 +4845,10 @@ main.home .table-row .col-md-5.cell {
     display: inline-block;
 }
 
-#headword {
-    font-weight: bold;
-    font-size: 17px;
-}
-
-#flash-cards #headword {
+ #headword {
     font-size: 26px;
     padding-left: 10px;
     font-family: semibold;
-
 }
 
 #flash-cards #pronunciation,
@@ -23796,6 +23790,11 @@ width: 460px;
         position: absolute;
     padding-top: 13px;
 
+}
+.tit-getting-new{
+    font-family:  Myriad_light;
+font-size: 17px;
+color: #8a8a8a;
 }
 .list-getting li{
 font-family:  Myriad_light;
