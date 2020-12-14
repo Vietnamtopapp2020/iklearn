@@ -2290,20 +2290,23 @@
                                                         
                                                         <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/IMG_English_Conversation_Main.jpg">
                                                         <div style=" float: right; width: 400px;">
-
+                                                            
                                                             <span style="font-family: Myriad_light; color: #cba015;  font-size: 29px;" >Let’s get you started with</span>
                                                             <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">English Conversation Practice</span>
                                                             <br><br>
                                                             <div style="margin-top: -9px;">
                                                                 <span class="tit-getting-new">This is great starting points for:</span>
-                                                                <ul class="list-getting list-getting-info">
-                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li style="  margin-top:3px; margin-bottom: 0">Beginner to Advanced Conversation practice</li>    
-                                                                    <img style="margin-top: -4px;" src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png">
-                                                                    <li style="  margin-top: -5px; margin-bottom: 0">TOEIC Preparation Program</li>    
-                                                                    <img style="margin-top: -5px" src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li style="  margin-top: -5px; margin-bottom: 5px">TOEFL Preparation Program</li>
+                                                                <ul class="list-getting list-top">
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEIC Preparation Program</li>
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEFL Preparation Program</li>
+                                                                    
                                                                 </ul>
-                                                                <img style="width: 7px" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
+                                                                <div style="padding-top: 10px">
+                                                                <img style="width: 7px; padding-bottom: 5px;" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
+
                                                                 <span style="color: #8a8a8a; font-size: 17px;padding-left: 10px;">Get Start!</span>
+                                                                </div>
                                                             </div>
 
                                                         </div>
@@ -4781,6 +4784,18 @@
                         $("#lost-password").addClass("hidden");
                         $("#create-account").removeClass("active");
                         $("#create-account").removeClass("in");
+                }else if(getprofile == 'https://iktutor.com/iklearn/en/#signup'){
+                        $("#my-account-modal").modal('show');
+                        $("#login-user").removeClass("active");
+                        $("#login-user").removeClass("in");
+                        $("#lost-password").removeClass("active");
+                        $("#lost-password").removeClass("in");
+                        $("#create-account").addClass("active");
+                        $("#create-account").addClass("in");
+
+                        var img = '<?php echo get_template_directory_uri() ?>/library/images/Profile_Image.png';
+                        $("#user-upload-avatar").attr('src',img);
+
                 }
             });
                 $(function () {
@@ -5932,7 +5947,7 @@
                             $('#icon-free div:nth-child(5)').css("margin-top", "7px");
                             $('#icon-free div:nth-child(6)').css("margin-top", "61px");
                             $('#icon-free div:nth-child(7)').css("margin-top", "8px");
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");                              
                         
                     }
                     });
@@ -6233,7 +6248,7 @@
                             $('#icon-free div:nth-child(3)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(4)').css("margin-top", "8px");
                             $('#icon-free div:nth-child(5)').css("margin-top", "172px");  
-                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px");
+                            $('#menu-left-myaccount li:nth-child(4)').css("margin-top", "1px"); 
                         }
 
                     });
@@ -7053,7 +7068,7 @@
                         $(".main-status-request").css("display","none");
                        $('.header-title-newschedule').css("display","none");
                        $("#getting-tutoring").addClass('active');
-                        $('.new-request-list').text('ENGLISH CONVERSATION WITH NATIVE SPEAKER');
+                        $('.new-request-list').text('ENGLISH CONVERSATION WITH NATIVE SPEAKER'); 
                         $("#create-account").removeClass("active");
                         $("#create-account").removeClass("in");
                         $("#login-user").removeClass("active");
@@ -8445,7 +8460,7 @@
                         }
                     });
 
-                    $(".go-to-all").click(function(){
+                    $(".go-to-all").click(function(){   
                         var day = $('#today-tutor').val();
                         closeNav();
                         $('.new-request-list').text('SCHEDULE');      
@@ -15332,8 +15347,9 @@
                 });
                 $('#add-word').click(function(){
                     $('.back-deep').css('display','block');   
-                        $('#add-word-box').css('display','block');
-                        $('#word-add').val('');
+                    $('#add-word-box').css('display','block'); 
+                    $('#word-add').val('');
+                    $('#dictionary-block').css('display','none');
                 });
                 
                 $('#sandbox-calender-tutor').ready(function(){
