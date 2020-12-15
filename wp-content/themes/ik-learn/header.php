@@ -55,11 +55,11 @@
  
     }
     // dùng cho server
-    $ip_user = $_SERVER['REMOTE_ADDR'];
-    $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
+    // $ip_user = $_SERVER['REMOTE_ADDR'];
+    // $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
     
     //dùng cho localhost
-    // $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
+    $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
     // 
     $time_zone_user1 = $time_zone_user->city;
     $timezone_name = $time_zone_user->timezone;
@@ -2286,7 +2286,7 @@
 
                                                 </div>
                                                 <div class="english-conver" style="display: none; margin-left: -34px;">
-                                                    <div class="step-box" style="height: 358px">
+                                                    <div class="step-box" style="height: 360px; margin-top:-17px !important; ">
                                                         
                                                         <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/IMG_English_Conversation_Main.jpg">
                                                         <div style=" float: right; width: 400px;">
@@ -2294,7 +2294,7 @@
                                                             <span style="font-family: Myriad_light; color: #cba015;  font-size: 29px;" >Let’s get you started with</span>
                                                             <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">English Conversation Practice</span>
                                                             <br><br>
-                                                            <div>
+                                                            <div style="margin-top: -9px;">
                                                                 <span class="tit-getting-new">This is great starting points for:</span>
                                                                 <ul class="list-getting list-top">
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
@@ -2304,7 +2304,7 @@
                                                                 </ul>
                                                                 <div style="padding-top: 10px">
                                                                 <img style="width: 7px; padding-bottom: 5px;" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
-                                                                
+
                                                                 <span style="color: #8a8a8a; font-size: 17px;padding-left: 10px;">Get Start!</span>
                                                                 </div>
                                                             </div>
@@ -4795,7 +4795,7 @@
 
                         var img = '<?php echo get_template_directory_uri() ?>/library/images/Profile_Image.png';
                         $("#user-upload-avatar").attr('src',img);
-                    
+
                 }
             });
                 $(function () {
@@ -7871,6 +7871,7 @@
                     });
 
                     $('.find-card-more').live('click', function (e) {
+                        closeNav();
                         e.preventDefault();
 
                         var id = $(this).attr('data-id');
