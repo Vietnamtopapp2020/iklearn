@@ -4323,7 +4323,7 @@
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://iktutor.com/iklearn/en/?r=spelling-practice" target="_bank">Spelling Practice </a></li>
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://ael.iktutor.com/ael/index.php?r=learn/practice&pid=48" target="_bank">Audio Spelling Practice </a></li>
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://ael.iktutor.com/ael/index.php?r=learn/practice&pid=52" target="_bank">Audio Vocabulary  </a></li>
-                                                    <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="#vocab-builder" data-toggle="tab" >Vocabulary Builder </a></li>
+                                                    <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="#vocab-builder" data-toggle="tab" onclick="openVocabularyBuilder()" >Vocabulary Builder </a></li>
                                                     
 
                                                 </ul>
@@ -4704,6 +4704,9 @@
             
             var url_image = '<?php echo get_template_directory_uri() ?>/library/images/';
             
+            function openVocabularyBuilder() {
+                $('#dictionary-block').css('display','none');
+            }
         </script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/pages/flash-cards.js"></script>
 
