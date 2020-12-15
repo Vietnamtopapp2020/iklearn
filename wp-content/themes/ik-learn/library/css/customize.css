@@ -18796,7 +18796,7 @@ header .user-nav > li:nth-child(2){
 #online-learning .container-acc-login-signup-online {
     margin-top:0px !important;
     margin-bottom: 30px !important;
-}
+};
 #my-account .article-header {
     background : #fff !important;
 }
@@ -20339,8 +20339,8 @@ span.select-box-it.form-control, span.select-box-it.form-control > span {
     border-bottom-color: #E0E0E0;
     padding-top: 8px;
     padding-bottom: 7px;
-        margin-left: -33px;
-    padding-left: 33px;
+    /*margin-left: -33px;
+    padding-left: 33px;*/
 }
 .toggle-btn{
     border-bottom: 1px solid #E0E0E0;
@@ -20394,8 +20394,8 @@ span.select-box-it.form-control, span.select-box-it.form-control > span {
 }
 .book-mark{
      z-index: 1;
-     height: 15px !important;
-     width: 15px !important;
+     height: 15px important!;
+     width: 15px important!;
 }
 #avatar{
     z-index: 0;
@@ -22072,7 +22072,7 @@ div.tr-info p{
 }
 #list-schedule-status{
     display: none;
-    padding: 5px 0 7px;
+    /*padding: 5px 0 7px;*/
 }
 .all-status-btn,
 .scheduled-status-btn,
@@ -23711,20 +23711,19 @@ cursor: pointer;
 }
 #edit-profile{
     width: 100px;
-    position: absolute;
     
-    margin-left: 11%;
+    
+    margin-right:  -50px;
     margin-top: -48px;
     border-radius: 5px !important;
     background: #FFA523;
     cursor: pointer;
     height: 35px;
         font-size: 15px;
+    float: right;
 }
 @media (max-width: 651px){
-    #edit-profile{
-        margin-left: 41%;   
-    }
+    
     #info-name{
         margin-left: 50px;
     }
@@ -23805,7 +23804,7 @@ width: 450px;
 padding-left: 20px;
 }
 .list-top li{
-    padding: 0 !important;
+    padding: 0 5px 0 20px !important;
 }
 .list-top img{
     padding-top: 8px !important;

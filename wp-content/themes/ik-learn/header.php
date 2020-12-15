@@ -55,11 +55,11 @@
  
     }
     // dùng cho server
-    // $ip_user = $_SERVER['REMOTE_ADDR'];
-    // $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
+    $ip_user = $_SERVER['REMOTE_ADDR'];
+    $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
     
     //dùng cho localhost
-    $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
+    // $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
     // 
     $time_zone_user1 = $time_zone_user->city;
     $timezone_name = $time_zone_user->timezone;
@@ -2230,7 +2230,7 @@
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
                                                             </ul>
                                                         </div>
-                                                        <a class="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
+                                                        <a class="go-to-point" data-toggle="tab" href="#purchase-points" ><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
@@ -2286,7 +2286,7 @@
 
                                                 </div>
                                                 <div class="english-conver" style="display: none; margin-left: -34px;">
-                                                    <div class="step-box" style="height: 360px; margin-top:-17px !important; ">
+                                                    <div class="step-box" style="height: 345px">
                                                         
                                                         <img style="width: 371px" src="<?php echo get_template_directory_uri(); ?>/library/images/IMG_English_Conversation_Main.jpg">
                                                         <div style=" float: right; width: 400px;">
@@ -2294,7 +2294,7 @@
                                                             <span style="font-family: Myriad_light; color: #cba015;  font-size: 29px;" >Let’s get you started with</span>
                                                             <span style="font-family: Myriad_light; color: #343434;  font-size: 40px; line-height: 1.3;">English Conversation Practice</span>
                                                             <br><br>
-                                                            <div style="margin-top: -9px;">
+                                                            <div>
                                                                 <span class="tit-getting-new">This is great starting points for:</span>
                                                                 <ul class="list-getting list-top">
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
@@ -2302,11 +2302,7 @@
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEFL Preparation Program</li>
                                                                     
                                                                 </ul>
-                                                                <div style="padding-top: 10px">
-                                                                <img style="width: 7px; padding-bottom: 5px;" src="<?php echo get_template_directory_uri(); ?>/library/images/icon_MAIN-SUB_normal_state.png">
-
-                                                                <span style="color: #8a8a8a; font-size: 17px;padding-left: 10px;">Get Start!</span>
-                                                                </div>
+                                                                
                                                             </div>
 
                                                         </div>
@@ -2325,7 +2321,7 @@
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
                                                             </ul>
                                                         </div>
-                                                        <a class="go-to-point" href="<?php echo locale_home_url() ?>/?r=my-account#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
+                                                        <a class="go-to-point" data-toggle="tab" href="#purchase-points"><div class="link-getting" style="color: #49a1bc;">Go to Purchase Points &nbsp;<img src="<?php echo get_template_directory_uri(); ?>/library/images/01_Icon_Step1.png"></div></a>
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
@@ -3504,7 +3500,7 @@
         </div>
         <div class="col-sm-12 css-btn-fl-card">
             <label>&nbsp;</label>
-                        <button type="button" id="flash-card-mode" class="border-btn btn-dark-blue" style="background: #58aec7"><?php _e('FLASH CARD MODE', 'iii-dictionary') ?></button>
+                        <button type="button" id="flash-card-mode" class="border-btn btn-dark-blue" style="background: #58aec7; margin-bottom: 30px;"><?php _e('FLASH CARD MODE', 'iii-dictionary') ?></button>
         </div>
     </div>
 
@@ -4323,7 +4319,7 @@
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://iktutor.com/iklearn/en/?r=spelling-practice" target="_bank">Spelling Practice </a></li>
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://ael.iktutor.com/ael/index.php?r=learn/practice&pid=48" target="_bank">Audio Spelling Practice </a></li>
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://ael.iktutor.com/ael/index.php?r=learn/practice&pid=52" target="_bank">Audio Vocabulary  </a></li>
-                                                    <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="#vocab-builder" data-toggle="tab" onclick="openVocabularyBuilder()" >Vocabulary Builder </a></li>
+                                                    <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="#vocab-builder" data-toggle="tab" >Vocabulary Builder </a></li>
                                                     
 
                                                 </ul>
@@ -4704,9 +4700,6 @@
             
             var url_image = '<?php echo get_template_directory_uri() ?>/library/images/';
             
-            function openVocabularyBuilder() {
-                $('#dictionary-block').css('display','none');
-            }
         </script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/js/pages/flash-cards.js"></script>
 
@@ -4798,7 +4791,7 @@
 
                         var img = '<?php echo get_template_directory_uri() ?>/library/images/Profile_Image.png';
                         $("#user-upload-avatar").attr('src',img);
-
+                    
                 }
             });
                 $(function () {
@@ -5017,7 +5010,7 @@
                         $("#menu-schedule-btn").attr("data-type","summary");  
                         $('#custom-timezone').attr("data-type","");
                         $('#custom-timezone').attr("data-day","");
-                        
+                        $('.english-conver').css("display","none");
                         $('.header-schedule').removeClass('active');
                         $('#list-schedule-status').css("display","none");
                         $('#table-status-schedule').html('');
@@ -5131,16 +5124,14 @@
                     
                     });
 
-                    $('.go-to-point').click(function(){
-                        var getprofile = window.location.href;                
-                        if(getprofile == 'https://iktutor.com/iklearn/en/?r=my-account#my-account-modal'){
-                        $("#my-account-modal").modal('hide');
-                        $("#purchase-points-dialog").modal('show');};
-                        // $("#purchase-points-dialog").css('display','block');
-                    });
+                    // $('.go-to-point').click(function(){
+                    //     $('#chase-point').click();
+                    //     // $("#purchase-points-dialog").css('display','block');
+                    // });
 
                     $('.go-to-find').click(function(){
                         $('.getting-tutor-main').css('display','none');
+                        $('.english-conver').css("display","none");
                          $("#getting-tutoring").removeClass("active");
                             $('.section-tutor-main').css('display','block');
                             
@@ -7111,6 +7102,7 @@
                         $('.radio_tutor_search').attr('checked',false);
                         $('#sub-findingtutor').addClass('active');
                         $("#getting-tutoring").removeClass("active");
+                        $('.english-conver').css("display","none");
                         if($(".main-my-schedule").hasClass('active-tab-schedule')){
                             $(".main-my-schedule").removeClass("active-tab-schedule");
 
@@ -7874,7 +7866,6 @@
                     });
 
                     $('.find-card-more').live('click', function (e) {
-                        closeNav();
                         e.preventDefault();
 
                         var id = $(this).attr('data-id');
@@ -8474,7 +8465,7 @@
                         $('#custom-timezone').attr("data-day","");
                         $("#my-account-modal").animate({ scrollTop: 0 }, "slow");
                         $('.header-schedule').removeClass('active');
-                        
+                        $('.english-conver').css("display","none");
                         $('#all-status-btn').addClass('active');
                         $("#open-menu-schedule").css("display","none");
                         $(".main-view-status").css("display","none");
