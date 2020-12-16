@@ -346,7 +346,7 @@
                     <div class="section-right">
                         <div class="tab-content">
                             <!-- Login -->
-                            <div id="login-user" class="style-form tab-pane fade">
+                            <div id="login-user" class="style-form tab-pane fade ">
                                 <h3>Login</h3>
                                 <div class="col-md-12">
                                     <form action="<?php echo locale_home_url() ?>/?r=login" name="loginform" method="post">
@@ -4319,7 +4319,7 @@
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://iktutor.com/iklearn/en/?r=spelling-practice" target="_bank">Spelling Practice </a></li>
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://ael.iktutor.com/ael/index.php?r=learn/practice&pid=48" target="_bank">Audio Spelling Practice </a></li>
                                                     <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="https://ael.iktutor.com/ael/index.php?r=learn/practice&pid=52" target="_bank">Audio Vocabulary  </a></li>
-                                                    <li id=""><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="#vocab-builder" data-toggle="tab" >Vocabulary Builder </a></li>
+                                                    <li class="vocab-builder"><img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_Point.png" style="width: 8px;">&nbsp;&nbsp;<a href="#vocab-builder" data-toggle="tab" >Vocabulary Builder </a></li>
                                                     
 
                                                 </ul>
@@ -4866,6 +4866,7 @@
                             $("#subscription").removeClass("in");
                             $("#updateinfo").removeClass("active");
                             $("#updateinfo").removeClass("in");
+                            $("#updateinfo").removeClass("active in");
 
                             $("#sub-myacc").css("display", "block");
                             $("#sub-myacc").addClass("opensub");
@@ -5734,6 +5735,10 @@
                             $('#menu-left-myaccount li:nth-child(6)').css("margin-top", "6px");                            
                         }
                     }
+                    });
+
+                    $('.vocab-builder').click(function(){
+                        $('#dictionary-block').css('display','none');
                     });
 
                     $('#onl-market').click(function(){

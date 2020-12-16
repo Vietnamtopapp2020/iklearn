@@ -337,9 +337,21 @@ var change = false;
         $('#as-memory').click (function (){
             if ($("#sel-fc-type").val() == "teacher-sets") {
                     fc_sets[parseInt($("#sel-teacher-sets").val())].words['w' + flashs[0].word_id].memorized = 1;
+                    
                 } else {
                     fc_folders[parseInt($("#sel-fc-folders").val())]['w' + flashs[0].word_id].memorized = 1;
+                    
                 }
+                var data_id = $(this).attr('data-id');
+                $('.toggle-memorized').each(function(){
+                    var word_id = $(this).attr('data-id');
+                    if(word_id == data_id){
+                        $(this).find('span').addClass('icon-yes2');
+                        $(this).find('span').removeClass('icon-no2');
+                    }
+                });
+                $("#next-flashcard").click();
+
             $.post(home_url + "/?r=ajax/flashcard/memorized", {id: flashs[0].word_id, memorized: 1});
                 flashs.splice(0, 1);
         });
@@ -362,8 +374,16 @@ var change = false;
             if(!jQuery.isEmptyObject(flashs)){
                 shuffle(flashs);
                 $("#answer-block").text(flashs[0].word);
-                $("#hints").text(flashs[0].notes);
+                // $("#hints").text(flashs[0].notes);
                 $("#memorized-radio").prop("checked", false);
+                $('#as-memory').attr('data-id',flashs[0].word_id);
+                $('.flashcard-note').each(function(){
+                    if($(this).attr('data-id') == flashs[0].word_id){
+                        $("#hints").text($(this).val());
+                        return false;
+                    }
+                });
+
             }
             else {
                 $('#flashcard-modal').css('display','none');
