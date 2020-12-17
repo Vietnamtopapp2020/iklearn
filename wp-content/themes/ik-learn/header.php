@@ -55,11 +55,11 @@
  
     }
     // dùng cho server
-    // $ip_user = $_SERVER['REMOTE_ADDR'];
-    // $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
+    $ip_user = $_SERVER['REMOTE_ADDR'];
+    $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
     
     //dùng cho localhost
-    $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
+    // $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
     // 
     $time_zone_user1 = $time_zone_user->city;
     $timezone_name = $time_zone_user->timezone;
@@ -4900,7 +4900,7 @@
                             $("#subscription").removeClass("in");
                             $("#updateinfo").removeClass("active");
                             $("#updateinfo").removeClass("in");
-                            $("#updateinfo").removeClass("active in");
+                            $("#vocab-builder").removeClass("active in");
 
                             $("#sub-myacc").css("display", "block");
                             $("#sub-myacc").addClass("opensub");

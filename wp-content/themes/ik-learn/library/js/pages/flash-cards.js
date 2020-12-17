@@ -58,7 +58,7 @@ var change = false;
         function setup_my_own_cards(change, fc) {
             if(fc == null){
                 var fld_id = fc_folders;
-                console.log(fc_folders[2]);
+                // console.log(fc_folders[2]);
             }else{
                 var fld_id = fc;
                 console.log(fc_folders[2]);
@@ -79,7 +79,7 @@ var change = false;
             $("#flashcard-set-header").hide();
 
             if (!$.isEmptyObject(fc_folders[fid])) {
-
+                console.log(fc_folders[fid]);
                 $.each(fc_folders[fid], function (i, v) {
                     if (!v.memorized) {
                         flashs.push(v);
@@ -304,9 +304,16 @@ var change = false;
 
         $("#fc-table").on("click", ".delete-card", function (e) {
             e.preventDefault();
+            var id = $(this).attr("data-id");
             $.post(home_url + "/?r=ajax/flashcard/delete", {id: $(this).attr("data-id")});
             //delete fc_folders[parseInt($("#sel-fc-folders").val())]["w" + parseInt($(this).attr("data-id"))];
             $(this).parents("tr").remove();
+            $.each(flashs, function (i, v) {
+                    if (v.word_id == id) {
+                        flashs.splice(i, 1);
+                        return false;
+                    }
+                });
         });
         $('#btn-ok-close, #cls-mes').click(function(){
             $('#modal-message-not-delete').css('display','none');
@@ -343,17 +350,20 @@ var change = false;
                     
                 }
                 var data_id = $(this).attr('data-id');
+                
                 $('.toggle-memorized').each(function(){
                     var word_id = $(this).attr('data-id');
                     if(word_id == data_id){
                         $(this).find('span').addClass('icon-yes2');
                         $(this).find('span').removeClass('icon-no2');
+                        return false;
                     }
                 });
-                $("#next-flashcard").click();
+                
 
             $.post(home_url + "/?r=ajax/flashcard/memorized", {id: flashs[0].word_id, memorized: 1});
                 flashs.splice(0, 1);
+                $("#next-flashcard").click();
         });
         $('#flashcard-modal').on('hidden.bs.modal',function(){
             flashs = [];
@@ -372,7 +382,9 @@ var change = false;
         
         function setup_flash() {
             if(!jQuery.isEmptyObject(flashs)){
+                console.log(flashs);
                 shuffle(flashs);
+
                 $("#answer-block").text(flashs[0].word);
                 // $("#hints").text(flashs[0].notes);
                 $("#memorized-radio").prop("checked", false);

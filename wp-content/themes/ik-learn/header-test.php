@@ -4866,7 +4866,7 @@
                             $("#subscription").removeClass("in");
                             $("#updateinfo").removeClass("active");
                             $("#updateinfo").removeClass("in");
-                            $("#updateinfo").removeClass("active in");
+                            $("#vocab-builder").removeClass("active in");
 
                             $("#sub-myacc").css("display", "block");
                             $("#sub-myacc").addClass("opensub");
