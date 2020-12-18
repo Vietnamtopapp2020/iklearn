@@ -55,11 +55,11 @@
  
     }
     // dùng cho server
-    $ip_user = $_SERVER['REMOTE_ADDR'];
-    $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
+    // $ip_user = $_SERVER['REMOTE_ADDR'];
+    // $time_zone_user = json_decode(file_get_contents_curl("https://ipinfo.io/{$ip_user}"));
     
     //dùng cho localhost
-    // $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
+     $time_zone_user = json_decode(file_get_contents("https://ipinfo.io/"));
     // 
     $time_zone_user1 = $time_zone_user->city;
     $timezone_name = $time_zone_user->timezone;
@@ -2218,7 +2218,7 @@
                                                     </div>
                                                     <div class="step-box" >
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                        <div class="step-btn" style=" background: #58aec8;">STEP 1</div>
+                                                        <div class="step-btn" style=" background: #58aec8;">STEP <b>1</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 305px" src="<?php echo get_template_directory_uri(); ?>/library/images/06_Step1.jpg">
                                                         <div>
@@ -2226,7 +2226,7 @@
                                                             <ul class="list-getting">
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>You will spend points to schedule a Tutoring.</li>
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>1 point = $1 dollar. Simple as that!</li>
-                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Anytime you are short on points, simply “Recharge” them.</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Anytime you are short on points, simply “<u>Recharge</u>” them.</li>
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
                                                             </ul>
                                                         </div>
@@ -2234,7 +2234,7 @@
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                         <div class="step-btn"  style=" background: #ffad42;">STEP 2</div>
+                                                         <div class="step-btn"  style=" background: #ffad42;">STEP <b>2</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 260px" src="<?php echo get_template_directory_uri(); ?>/library/images/07_Step2.jpg">
                                                         <div>
@@ -2252,7 +2252,7 @@
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                        <div class="step-btn"  style=" background: #ff6d6d;">STEP 3</div>
+                                                        <div class="step-btn"  style=" background: #ff6d6d;">STEP <b>3</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 250px" src="<?php echo get_template_directory_uri(); ?>/library/images/08_Step3.jpg">
                                                         <p class="tit-getting">It’s time to select the right tutor!</p>
@@ -2268,7 +2268,7 @@
                                                     </div>
                                                     <div class="step-box" style="border: 0">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                        <div class="step-btn"  style=" background: #65d02a;">STEP 4</div>
+                                                        <div class="step-btn"  style=" background: #65d02a;">STEP <b>4</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 309px" src="<?php echo get_template_directory_uri(); ?>/library/images/09_Step4.jpg">
                                                         <p class="tit-getting">What to expect after everything is set.</p>
@@ -2300,6 +2300,8 @@
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Beginner to Advanced Conversation Practice</li>
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEIC Preparation Program</li>
                                                                     <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>TOEFL Preparation Program</li>
+                                                                    <br>
+                                                                    <img src="<?php echo get_template_directory_uri(); ?>/library/images/icon_arrow_Started.png"><li><b><u>Get Started</u></b></li>
                                                                     
                                                                 </ul>
                                                                 
@@ -2309,7 +2311,7 @@
                                                     </div>
                                                     <div class="step-box" >
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                        <div class="step-btn" style=" background: #58aec8;">STEP 1</div>
+                                                        <div class="step-btn" style=" background: #58aec8;">STEP <b>1</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 305px" src="<?php echo get_template_directory_uri(); ?>/library/images/06_Step1.jpg">
                                                         <div>
@@ -2317,7 +2319,7 @@
                                                             <ul class="list-getting">
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>You will spend points to schedule a Tutoring.</li>
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>1 point = $1 dollar. Simple as that!</li>
-                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Anytime you are short on points, simply “Recharge” them.</li>
+                                                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>Anytime you are short on points, simply “<u>Recharge</u>” them.</li>
                                                                 <img src="<?php echo get_template_directory_uri(); ?>/library/images/03_Icon_Sub-menu.png"><li>That’s all, now you are ready to begin!</li>
                                                             </ul>
                                                         </div>
@@ -2325,7 +2327,7 @@
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                         <div class="step-btn"  style=" background: #ffad42;">STEP 2</div>
+                                                         <div class="step-btn"  style=" background: #ffad42;">STEP <b>2</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 260px" src="<?php echo get_template_directory_uri(); ?>/library/images/07_Step2.jpg">
                                                         <div>
@@ -2343,7 +2345,7 @@
                                                     </div>
                                                     <div class="step-box">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                        <div class="step-btn"  style=" background: #ff6d6d;">STEP 3</div>
+                                                        <div class="step-btn"  style=" background: #ff6d6d;">STEP <b>3</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 250px" src="<?php echo get_template_directory_uri(); ?>/library/images/08_Step3.jpg">
                                                         <p class="tit-getting">It’s time to select the right English Conversation Teacher</p>
@@ -2359,7 +2361,7 @@
                                                     </div>
                                                     <div class="step-box" style="border: 0">
                                                         <img class="step-below" src="<?php echo get_template_directory_uri(); ?>/library/images/13_Step_BelowArrow.png">
-                                                        <div class="step-btn"  style=" background: #65d02a;">STEP 4</div>
+                                                        <div class="step-btn"  style=" background: #65d02a;">STEP <b>4</b></div>
                                                         <br>
                                                         <img class="getting-img" style="width: 309px" src="<?php echo get_template_directory_uri(); ?>/library/images/09_Step4.jpg">
                                                         <p class="tit-getting">What to expect after everything is set.</p>
